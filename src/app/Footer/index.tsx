@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <section className="relative m-auto mt-80 sm:mt-14 sm:w-[72rem] w-80 mb-20">
+    <section className="relative m-auto mt-80 lg:mt-14 lg:w-[72rem] md:w-[40rem] w-80 mb-20">
       <div className="border-b-2"></div>
-      <div className="sm:flex mt-16 text-footer justify-between space-y-6 sm:space-y-0">
+      <div className="lg:flex mt-16 text-footer justify-between space-y-6 lg:space-y-0">
       <div className="w-[20rem] space-y-4">
         <span className="text-text-4 font-medium text-lg">Informações</span>
         <p>Todos os direitos reservados Meow Cafe Ltda.</p>

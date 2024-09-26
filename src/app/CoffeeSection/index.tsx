@@ -27,18 +27,21 @@ const CoffeeSection = () => {
 
   return (
     <section className="relative w-full flex justify-center">
-      <div className="sm:absolute min-h-screen top-44 text-headings">
-        <div className="sm:w-[34rem] m-auto text-center space-y-7">
+      <div className="lg:absolute min-h-screen top-44 text-headings">
+        <div className="lg:w-[34rem] m-auto text-center space-y-7">
 
           <h2 className="w-28 items-center m-auto font-semibold text-4xl border-headings border-b-2">Cafés</h2>
-          <p className="w-80 sm:w-full m-auto">Conheça nossos cafés exclusivos pensados e preparados por nossos baristas renomados. </p>
+          <p className="w-80 md:w-96 lg:w-full m-auto">Conheça nossos cafés exclusivos pensados e preparados por nossos baristas renomados. </p>
           <p className="font-semibold hover:translate-x-8 duration-500">Veja Todos &gt;</p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-16">
-          {coffees.map(coffee => (
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {coffees.map((coffee, index) => (
             <div key={coffee.title}
-              className={`flex flex-col ${coffee.bg} w-[300px] py-6 items-center text-center text-white rounded-3xl space-y-4 px-4`}
+              className={`
+                flex flex-col w-[300px] py-6 items-center text-center text-white rounded-3xl space-y-4 px-4 ${coffee.bg} 
+                ${index === 2 && "md:col-span-2 md:justify-self-center lg:col-span-1"}
+              `}
             >
                 <img src={coffee.img} alt={coffee.title} 
                 className="h-40"
@@ -51,7 +54,7 @@ const CoffeeSection = () => {
           ))}
         </div>
       </div>
-      <img src="image-bg.png" alt="bg-drinks" className="bg-cover w-full hidden sm:block" />
+      <img src="image-bg.png" alt="bg-drinks" className="bg-cover w-full hidden lg:block" />
     </section>
   )
 }
